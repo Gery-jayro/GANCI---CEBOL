@@ -4,7 +4,7 @@ const SETTINGS = {
     freeShipping: 100000,
     shippingMin: 10000,
     shippingMax: 50000,
-    pickupAddress: "Toko JayCin (isi alamat tokomu di SETTINGS.pickupAddress)"
+    pickupAddress: "Toko JayCin (BATUBULAN, TEGALTAMU, PERTIGAAN PATUNG BARONG)"
 };
 
 const products = [
