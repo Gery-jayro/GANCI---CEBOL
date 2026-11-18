@@ -316,3 +316,39 @@ select:focus { outline: none; border-color: #3d82bd; }
       radial-gradient(circle 42px at 93% 64%, transparent 0 36px, rgba(244, 114, 182, .45) 37px 40px, transparent 41px);
   }
 }
+
+/* Laptop: 1 layar = 1 elemen (scroll snap) */
+@media (min-width: 900px) {
+  html { scroll-snap-type: y mandatory; scroll-padding-top: 70px; }
+  main > .banner {
+    height: calc(100vh - 70px); margin: 0 auto; padding-bottom: 80px; box-sizing: border-box; border-radius: 0;
+    display: flex; align-items: center; scroll-snap-align: start; overflow: visible;
+  }
+  main > .banner img { border-radius: 14px; }
+  .catalog { margin: 0 auto; padding: 0; }
+  .catalog .section-head, .catalog .chips { display: none; }
+  .grid, .cat-grid { display: grid; grid-template-columns: 1fr; gap: 0; grid-auto-rows: calc(100vh - 70px); justify-items: center; align-items: center; }
+  .grid .card { width: min(440px, calc((100vh - 390px) / 1.05)); min-width: 250px; margin-bottom: 80px; scroll-snap-align: center; }
+  .view { padding: 0; }
+  .view .v-head {
+    min-height: calc(100vh - 70px); margin: 0; padding-bottom: 80px; box-sizing: border-box; scroll-snap-align: start;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  }
+  .view .v-head h2 { font-size: 2.2rem; }
+  .view .cat-grid { grid-template-columns: repeat(2, minmax(0, 360px)); grid-auto-rows: auto; gap: 16px; justify-content: center; align-content: center; min-height: calc(100vh - 70px); padding-bottom: 80px; box-sizing: border-box; scroll-snap-align: start; }
+  .view .v-empty, .catalog .empty { min-height: calc(100vh - 70px); box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: center; scroll-snap-align: start; border: 0; background: none; }
+  .catalog .empty[hidden] { display: none; }
+}
+@media (min-width: 900px) {
+  .view:has(.cat-grid), .view:has(.v-empty) {
+    min-height: calc(100vh - 70px); padding-bottom: 80px; box-sizing: border-box; scroll-snap-align: start;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .view:has(.cat-grid)[hidden], .view:has(.v-empty)[hidden] { display: none; }
+  .view:has(.cat-grid) .v-head, .view:has(.v-empty) .v-head { min-height: 0; padding: 0 0 20px; }
+  .view:has(.cat-grid) .cat-grid, .view:has(.v-empty) .v-empty { min-height: 0; padding: 0; }
+  .view:has(.v-empty) .v-empty { width: min(520px, 100%); }
+}
+@media (min-width: 900px) {
+  .view .cat-card { align-items: center; text-align: center; padding: 22px; }
+}
