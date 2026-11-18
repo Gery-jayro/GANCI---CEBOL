@@ -1,16 +1,16 @@
 const SETTINGS = {
-    storeName: "JayCin",
+    storeName: "Cebol",
     whatsapp: "628997465249",
     freeShipping: 100000,
     shippingMin: 10000,
     shippingMax: 50000,
-    pickupAddress: "Toko JayCin (BATUBULAN, TEGALTAMU, PERTIGAAN PATUNG BARONG)"
+    pickupAddress: "Toko Cebol (BATUBULAN, TEGALTAMU, PERTIGAAN PATUNG BARONG)"
 };
 
 const products = [
     {
         id: 1,
-        title: "Ganci Cebol Topi Hijau",
+        title: "Cebol Topi Hijau",
         cats: ["Casual"],
         price: 15000,
         old: 20000,
@@ -21,7 +21,7 @@ const products = [
     },
     {
         id: 2,
-        title: "Ganci Cebol Seragam Kerja",
+        title: "Cebol Seragam Kerja",
         cats: ["Kerja"],
         price: 18000,
         old: 25000,
@@ -32,7 +32,7 @@ const products = [
     },
     {
         id: 3,
-        title: "Ganci Cebol Tas Selempang",
+        title: "Cebol Tas Selempang",
         cats: ["Casual"],
         price: 22000,
         old: 28000,
@@ -43,7 +43,7 @@ const products = [
     },
     {
         id: 4,
-        title: "Ganci Cebol Seragam Sekolah",
+        title: "Cebol Seragam Sekolah",
         cats: ["Sekolah"],
         price: 25000,
         sold: 15,
