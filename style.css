@@ -317,8 +317,8 @@ select:focus { outline: none; border-color: #3d82bd; }
   }
 }
 
-/* Laptop: 1 layar = 1 bagian (banner, lalu katalog) */
-@media (min-width: 900px) {
+/* Laptop: 1 layar = 1 bagian (banner, lalu katalog). Hanya layar lebar/landscape */
+@media (min-width: 900px) and (min-aspect-ratio: 5/4) {
   html { scroll-snap-type: y mandatory; scroll-padding-top: 70px; }
   main > .banner {
     height: calc(100vh - 70px); margin: 0 auto; padding-bottom: 80px; box-sizing: border-box;
